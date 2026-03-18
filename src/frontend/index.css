@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Light warm parchment theme */
+    --background: 0.97 0.010 80;
+    --foreground: 0.18 0.020 60;
+    --card: 0.99 0.008 80;
+    --card-foreground: 0.18 0.020 60;
+    --popover: 0.98 0.010 80;
+    --popover-foreground: 0.18 0.020 60;
+    /* Gold primary */
+    --primary: 0.62 0.14 75;
+    --primary-foreground: 0.98 0.010 80;
+    /* Soft secondary */
+    --secondary: 0.93 0.018 80;
+    --secondary-foreground: 0.25 0.025 60;
+    --muted: 0.92 0.015 80;
+    --muted-foreground: 0.50 0.020 70;
+    /* Accent gold */
+    --accent: 0.60 0.15 75;
+    --accent-foreground: 0.98 0.010 80;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.82 0.030 80;
+    --input: 0.90 0.020 80;
+    --ring: 0.62 0.14 75;
+    /* Charts */
+    --chart-1: 0.62 0.14 75;
+    --chart-2: 0.65 0.14 60;
+    --chart-3: 0.55 0.10 270;
+    --chart-4: 0.70 0.13 40;
+    --chart-5: 0.60 0.15 300;
+    /* Sidebar */
+    --sidebar: 0.96 0.012 80;
+    --sidebar-foreground: 0.18 0.020 60;
+    --sidebar-primary: 0.62 0.14 75;
+    --sidebar-primary-foreground: 0.98 0.010 80;
+    --sidebar-accent: 0.93 0.018 80;
+    --sidebar-accent-foreground: 0.25 0.025 60;
+    --sidebar-border: 0.82 0.030 80;
+    --sidebar-ring: 0.62 0.14 75;
+
+    /* Custom TriOracle light tokens */
+    --gold-bright: 0.72 0.16 80;
+    --gold-deep: 0.55 0.14 72;
+    --parchment: 0.97 0.012 80;
+    --parchment-card: 0.995 0.008 80;
+    --parchment-elevated: 0.93 0.018 78;
+    --text-dark: 0.18 0.020 55;
+    --text-mid: 0.40 0.025 65;
+  }
+
+  .dark {
+    --background: 0.10 0.025 260;
+    --foreground: 0.92 0.015 80;
+    --card: 0.13 0.030 260;
+    --card-foreground: 0.90 0.015 80;
+    --popover: 0.11 0.025 260;
+    --popover-foreground: 0.90 0.015 80;
+    --primary: 0.78 0.12 85;
+    --primary-foreground: 0.10 0.025 260;
+    --secondary: 0.16 0.035 260;
+    --secondary-foreground: 0.90 0.015 80;
+    --muted: 0.18 0.02 260;
+    --muted-foreground: 0.60 0.015 80;
+    --accent: 0.72 0.14 85;
+    --accent-foreground: 0.10 0.025 260;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.205 0 0;
+    --border: 0.25 0.04 260;
+    --input: 0.20 0.03 260;
+    --ring: 0.78 0.12 85;
+    --chart-1: 0.78 0.12 85;
+    --chart-2: 0.65 0.14 60;
+    --chart-3: 0.55 0.10 270;
+    --chart-4: 0.70 0.13 40;
+    --chart-5: 0.60 0.15 300;
+    --sidebar: 0.11 0.025 260;
+    --sidebar-foreground: 0.90 0.015 80;
+    --sidebar-primary: 0.78 0.12 85;
+    --sidebar-primary-foreground: 0.10 0.025 260;
+    --sidebar-accent: 0.16 0.035 260;
+    --sidebar-accent-foreground: 0.90 0.015 80;
+    --sidebar-border: 0.25 0.04 260;
+    --sidebar-ring: 0.78 0.12 85;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Jost', sans-serif;
+    background-color: #faf7f2;
+    color: #2c2416;
+    overflow-x: hidden;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f5f0e8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #B8961E;
+    border-radius: 3px;
+  }
+}
+
+/* =================== TRIORACLE CUSTOM STYLES (LIGHT THEME) =================== */
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cinzel-deco {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-jost {
+  font-family: 'Jost', sans-serif;
+}
+
+/* Gold text */
+.text-gold {
+  color: #9a7b1a;
+}
+
+.text-gold-bright {
+  color: #B8961E;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #B8961E 0%, #9a7b1a 40%, #7a5f10 70%, #B8961E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Light parchment background */
+.starfield {
+  position: relative;
+  background: #faf7f2;
+}
+
+.starfield::before {
+  display: none;
+}
+
+/* Gold divider */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #B8961E 20%, #D4AF37 50%, #B8961E 80%, transparent 100%);
+  margin: 0;
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C4A020, transparent);
+}
+
+/* Gold card — light */
+.gold-card {
+  background: #ffffff;
+  border: 1px solid rgba(180, 140, 20, 0.25);
+  box-shadow: 0 2px 12px rgba(180, 140, 20, 0.06);
+  transition: all 0.3s ease;
+}
+
+.gold-card:hover {
+  border-color: rgba(180, 140, 20, 0.55);
+  box-shadow: 0 8px 32px rgba(180, 140, 20, 0.14), 0 0 1px rgba(180, 140, 20, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Gold button */
+.btn-gold {
+  background: linear-gradient(135deg, #B8961E 0%, #D4AF37 50%, #B8961E 100%);
+  color: #fff8e7;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #C9A825 0%, #E0BF45 50%, #C9A825 100%);
+  box-shadow: 0 4px 20px rgba(180, 140, 20, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Gold outline button */
+.btn-gold-outline {
+  background: transparent;
+  color: #9a7b1a;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border: 1.5px solid #B8961E;
+  transition: all 0.3s ease;
+}
+
+.btn-gold-outline:hover {
+  background: rgba(180, 140, 20, 0.08);
+  border-color: #D4AF37;
+  color: #7a5f10;
+  box-shadow: 0 4px 20px rgba(180, 140, 20, 0.2);
+}
+
+/* Navbar — light */
+.navbar-glass {
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(180, 140, 20, 0.2);
+}
+
+/* Hero overlay — lighter for light theme */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(250,247,242,0.15) 0%,
+    rgba(250,247,242,0.35) 50%,
+    rgba(250,247,242,0.85) 100%
+  );
+}
+
+/* Ornamental star */
+.ornament-star::before {
+  content: '✦';
+  color: #B8961E;
+  font-size: 0.8rem;
+  margin: 0 0.5rem;
+}
+
+/* Section heading */
+.section-heading {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Service icon wrapper */
+.service-icon-ring {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(180, 140, 20, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(180, 140, 20, 0.08) 0%, transparent 70%);
+  transition: all 0.3s ease;
+}
+
+.gold-card:hover .service-icon-ring {
+  border-color: rgba(180, 140, 20, 0.7);
+  background: radial-gradient(circle, rgba(180, 140, 20, 0.15) 0%, transparent 70%);
+  box-shadow: 0 0 20px rgba(180, 140, 20, 0.15);
+}
+
+/* Blog tabs */
+.blog-tab-active {
+  background: linear-gradient(135deg, #B8961E 0%, #D4AF37 100%);
+  color: #fff8e7;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  background: rgba(240, 235, 220, 0.75);
+  backdrop-filter: blur(4px);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+
+/* Gold shimmer text — dark gold on light bg */
+.text-shimmer {
+  background: linear-gradient(90deg, #9a7b1a 0%, #C4A020 25%, #D4AF37 50%, #C4A020 75%, #9a7b1a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Price badge */
+.price-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  background: linear-gradient(135deg, rgba(180,140,20,0.12) 0%, rgba(212,175,55,0.08) 100%);
+  border: 1px solid rgba(180,140,20,0.35);
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #9a7b1a;
+}
+
+/* WhatsApp button */
+.btn-whatsapp {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, #2EE073 0%, #1aA894 100%);
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Celestial decoration */
+.celestial-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(180, 140, 20, 0.10);
+  pointer-events: none;
+}
+
+/* Accordion styling override */
+[data-state="open"] .accordion-chevron {
+  transform: rotate(180deg);
+}
+
+.accordion-chevron {
+  transition: transform 0.2s ease;
+}
+
+/* Mobile menu */
+.mobile-menu-item {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid rgba(180, 140, 20, 0.12);
+  transition: all 0.2s ease;
+  color: #3a2e18;
+}
+
+.mobile-menu-item:hover {
+  color: #9a7b1a;
+  background: rgba(180, 140, 20, 0.05);
+}
